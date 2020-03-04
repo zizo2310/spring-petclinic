@@ -9,4 +9,8 @@ public class ExtremeDivision {
 		this.x = x;
 		this.y = y;
 	}
+	
+	public int extremeDivide() {
+		return this.x % this.y;
+	}
 }

@@ -1,6 +1,6 @@
 package org.springframework.samples.petclinic;
 
-public class ExtremeMultiplication {
+public class ExtremeMultiplication implements MathStatement {
 
 	private int x;
 	private int y;
@@ -12,5 +12,10 @@ public class ExtremeMultiplication {
 	
 	public int extremeMultiply() {
 		return this.x * this.y;
+	}
+	
+	@Override
+	public String profoundMathStatement() {
+		return "2 * 2 is also 4! Not 4 factorial. I'm just shocked so I am using an exclamation mark...";
 	}
 }

@@ -1,6 +1,6 @@
 package org.springframework.samples.petclinic;
 
-public class ExtremeDivision {
+public class ExtremeDivision implements MathStatement {
 
 	private int x;
 	private int y;
@@ -12,5 +12,10 @@ public class ExtremeDivision {
 	
 	public int extremeDivide() {
 		return this.x % this.y;
+	}
+	
+	@Override
+	public String profoundMathStatement() {
+		return "2 / 2 = 1 but 1 / 1 = 1 and yet 2 / 1 = 2";
 	}
 }

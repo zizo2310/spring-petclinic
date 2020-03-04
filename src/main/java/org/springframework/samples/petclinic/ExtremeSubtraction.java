@@ -9,4 +9,8 @@ public class ExtremeSubtraction {
 		this.x = x;
 		this.y = y;
 	}
+	
+	public int extremeSubtract() {
+		return this.x - this.y;
+	}
 }

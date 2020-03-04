@@ -6,10 +6,11 @@ import org.junit.jupiter.api.Test;
 
 public class ExtremeMultiplicationTest {
 
-	 @Test
-	   public void testExtremeSubtract() {	
+	@Test
+	public void testExtremeSubtract() {
 
-		 ExtremeMultiplication e1 = new ExtremeMultiplication(16, 4);
-	      assertEquals(e1.extremeMultiply(), 64);     
-	   }
+		ExtremeMultiplication e1 = new ExtremeMultiplication(16, 4);
+		assertEquals(e1.extremeMultiply(), 64);
+	}
+
 }

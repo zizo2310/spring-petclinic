@@ -5,10 +5,11 @@ import org.junit.jupiter.api.Test;
 
 public class ExtremeDivisionTest {
 
-	 @Test
-	   public void testExtremeDivide() {	
+	@Test
+	public void testExtremeDivide() {
 
-	     ExtremeDivision e1 = new ExtremeDivision(16, 4);
-	      assertEquals(e1.extremeDivide(), 4);     
-	   }
+		ExtremeDivision e1 = new ExtremeDivision(16, 4);
+		assertEquals(e1.extremeDivide(), 4);
+	}
+
 }

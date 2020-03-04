@@ -6,10 +6,11 @@ import org.junit.jupiter.api.Test;
 
 public class ExtremeSubtractionTest {
 
-	 @Test
-	   public void testExtremeSubtract() {	
+	@Test
+	public void testExtremeSubtract() {
 
-		 ExtremeSubtraction e1 = new ExtremeSubtraction(16, 4);
-	     assertEquals(e1.extremeSubtract(), 12);
-	   }
+		ExtremeSubtraction e1 = new ExtremeSubtraction(16, 4);
+		assertEquals(e1.extremeSubtract(), 12);
+	}
+
 }

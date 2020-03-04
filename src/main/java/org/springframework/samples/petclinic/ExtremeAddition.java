@@ -1,6 +1,6 @@
 package org.springframework.samples.petclinic;
 
-public class ExtremeAddition {
+public class ExtremeAddition implements MathStatement {
 
 	private int x;
 	private int y;
@@ -12,5 +12,10 @@ public class ExtremeAddition {
 	
 	public int extremeAdd() {
 		return this.x + this.y;
+	}
+	
+	@Override
+	public String profoundMathStatement() {
+		return "2 + 2 is 4";
 	}
 }

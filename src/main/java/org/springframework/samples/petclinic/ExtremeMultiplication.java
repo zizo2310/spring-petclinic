@@ -9,4 +9,8 @@ public class ExtremeMultiplication {
 		this.x = x;
 		this.y = y;
 	}
+	
+	public int extremeMultiply() {
+		return this.x * this.y;
+	}
 }

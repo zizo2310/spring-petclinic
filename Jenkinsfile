@@ -28,3 +28,5 @@ pipeline {
                  sh './mvn deploy'
             }  
 }
+    }
+}

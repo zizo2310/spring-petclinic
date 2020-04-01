@@ -6,12 +6,25 @@ pipeline {
                 sh './mvnw package' 
             }
         }
-    }
-    post {
-    	failure {
-        	sh "git bisect start ${f14d178657eb670e48ba547d6eddfa6e76b53b22} ${ac3e64208e3bcf85eaeff2f870083212f526676f}"
-			sh "git bisect run mvn clean test"
-			sh "git bisect reset"
-    	}
-   }
+           
+            
+ stage ('Test') {
+                    steps {
+                    sh 'mvn test'
+                    }
+            }
+            
+ stage ('Package') {
+                    steps {
+                    sh 'mvn package'
+                    }
+            }
+            
+ stage ('Deploy') {
+                    when {
+                    branch 'master'
+                    }
+         step {
+                 sh './mvn deploy'
+            }  
 }

@@ -313,6 +313,17 @@
         <enabled>true</enabled>
       </snapshots>
     </pluginRepository>
+        <!-- Deployment -->  
+      <distributionManagement>
+    <repository>
+        <uniqueVersion>false</uniqueVersion>
+        <id>spring-milestones</id>
+        <nameSpring Milestones</name>
+        <url>https://repo.spring.io/milestone</url>
+        <layout>default</layout>
+    </repository>
+</distributionManagement>
+     <!-- Deployment -->   
     <pluginRepository>
       <id>spring-milestones</id>
       <name>Spring Milestones</name>
@@ -322,5 +333,5 @@
       </snapshots>
     </pluginRepository>
   </pluginRepositories>
-
+ 
 </project>

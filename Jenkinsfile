@@ -32,15 +32,15 @@ pipeline {
  post {
         success {
             emailext(attachLog: false,
-                        body: 'pipeline failed', 
-                        subject: 'sage4se pipeline failure', 
-                        to: 'oshatout@hotmail.com')
+                        body: 'pipeline success', 
+                        subject: 'Q1 pipeline ', 
+                        to: 'moataz_fawzy@live.com')
         }
         failure {
             emailext(attachLog: true,
                         body: 'pipeline failed', 
-                        subject: 'sage4se pipeline failure', 
-                        to: 'oshatout@hotmail.com')
+                        subject: 'Q1 pipeline ', 
+                        to: 'moataz_fawzy@live.com')
         }
     }
 }

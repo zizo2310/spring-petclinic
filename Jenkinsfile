@@ -29,12 +29,12 @@ pipeline {
     }
 
   }
-
-	post {
-        success {
-        mail to: 'moataz_fawzy@live.com',
-             subject: "The Pipeline Built Successfully: ${currentBuild.fullDisplayName}",
-             body: "BUILD, TEST, PACKAGE, DEPLOY ran sucessfully. Visit ${env.BUILD_URL} for more info."
-		}
-	}
+ post {
+    success {
+      slackSend (color: '#00FF00', message: "Job success! '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
+    }
+    failure {
+      slackSend (color: '#FF0000', message: "Job failed! '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
+    }
+  }
 }

@@ -24,7 +24,7 @@ pipeline {
         branch 'master'
       }
       steps {
-        sh './mvnw deploy'
+        sh 'mvn clean install:install'
       }
     }
 

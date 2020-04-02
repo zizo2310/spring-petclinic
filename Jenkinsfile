@@ -19,12 +19,12 @@ pipeline {
       }
     }
 
-    stage('deploy') {
+  stage('deploy') {
       when {
         branch 'master'
       }
       steps {
-        sh 'mvn clean install:install'
+        sh './mvnw deploy'
       }
     }
 

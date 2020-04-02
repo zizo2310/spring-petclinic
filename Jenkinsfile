@@ -30,11 +30,17 @@ pipeline {
 
   }
  post {
-    success {
-      slackSend (color: '#00FF00', message: "Job success! '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
+        success {
+            emailext(attachLog: false,
+                        body: 'pipeline failed', 
+                        subject: 'sage4se pipeline failure', 
+                        to: 'oshatout@hotmail.com')
+        }
+        failure {
+            emailext(attachLog: true,
+                        body: 'pipeline failed', 
+                        subject: 'sage4se pipeline failure', 
+                        to: 'oshatout@hotmail.com')
+        }
     }
-    failure {
-      slackSend (color: '#FF0000', message: "Job failed! '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
-    }
-  }
 }

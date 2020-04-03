@@ -19,18 +19,10 @@ pipeline {
                            }
 
          }
- post {
-        success {
-                  emailext(attachLog: false,
-                             body: 'pipeline success', 
-                              subject: 'Q1 pipeline ', 
-                               to: 'moataz_fawzy@live.com')
-                  }
-        failure {
-            emailext(attachLog: true,
-                        body: 'pipeline failed', 
-                        subject: 'Q1 pipeline ', 
-                        to: 'moataz_fawzy@live.com')
-                 }
-        }
+         
+  stage('slack') {
+                         slackSend baseUrl: 'https://hooks.slack.com/services/', channel: '#jinkinsnotefication', 
+                           color: 'good', message: 'build success', tokenCredentialId: 'slack demo', username: 'app.slack'
+                          }
+ 
 }

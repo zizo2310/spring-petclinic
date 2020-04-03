@@ -19,10 +19,6 @@ pipeline {
                            }
 
          }
-         
-  stage('slack') {
-                         slackSend baseUrl: 'https://hooks.slack.com/services/', channel: '#jinkinsnotefication', 
-                           color: 'good', message: 'build success', tokenCredentialId: 'slack demo', username: 'app.slack'
-                          }
+
  
 }

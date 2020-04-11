@@ -313,6 +313,7 @@
         <enabled>true</enabled>
       </snapshots>
     </pluginRepository>
+   
     <pluginRepository>
       <id>spring-milestones</id>
       <name>Spring Milestones</name>
@@ -322,5 +323,5 @@
       </snapshots>
     </pluginRepository>
   </pluginRepositories>
-
+ 
 </project>
